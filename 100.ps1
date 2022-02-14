@@ -8,4 +8,4 @@ param($scaling = 0)
                   uint fWinIni);
 '@
  $apicall = Add-Type -MemberDefinition $source -Name WinAPICall -Namespace SystemParamInfo -PassThru
- $apicall::SystemParametersInfo(0x009F, $scaling, $null, 0) | Out-Null
+ $apicall::SystemParametersInfo(0x009F, $scaling, $null, 1) | Out-Null
